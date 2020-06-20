@@ -5,6 +5,7 @@
 - luke.god
 - jayce.jeon
 - jenny.kk
+- pang.yu
 
 #### 스터디 방식
 - 매주 수요일 8-9시 4번 회의실
