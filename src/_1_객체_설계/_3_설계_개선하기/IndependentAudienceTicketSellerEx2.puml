@@ -1,0 +1,60 @@
+@startuml
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+class Audience {
+    bag
+    getBag()
+}
+class TicketSeller {
+    sellTo(audience)
+}
+
+class Theater {
+    enter(audience)
+}
+class Invitation {
+    when
+}
+class Ticket {
+    fee
+    getFee()
+}
+class Bag {
+    amount
+    hasInvitation()
+    hasTicket()
+    setTicket(ticket)
+    minusAmount(amount)
+    plusAmount(amount)
+}
+class TicketOffice {
+    amount
+    getTicket()
+    minusAmount(amount)
+    plusAmount(amount)
+}
+hide empty members
+hide empty methods
+
+Theater --> "ticketSeller" TicketSeller
+Theater ..> Audience
+
+TicketSeller --> "ticketOffice" TicketOffice
+TicketSeller .. Audience
+TicketSeller ..> Ticket
+
+Audience --> "bag" Bag
+
+Bag --> "invitation" Invitation
+Bag --> "ticket" Ticket
+
+TicketOffice *--> " tickets" Ticket
+
+
+
+
+@enduml
