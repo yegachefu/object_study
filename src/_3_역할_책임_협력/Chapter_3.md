@@ -77,3 +77,6 @@ Movie가 기본 요금인 fee와, 할인 정책인 discountPolicy라는 상태 �
 역할들의 상호작용으로 구성되는 것은 **협력
 협력**을 구성하기 위해 **역할**에 적합한 **객체**가 선택
 **객체**는 **클래스**를 이용해 구현되고 생성
+
+
+notion : https://www.notion.so/ipaddress/Object-3-e45b07044e0e488d83dfd2bafe46ee8b
