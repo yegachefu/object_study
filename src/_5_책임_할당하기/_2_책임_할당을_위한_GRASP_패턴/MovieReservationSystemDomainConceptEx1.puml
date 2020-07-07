@@ -1,0 +1,28 @@
+@startuml
+skinparam object {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+object 영화
+object 상영
+object 예매
+object 금액할인영화
+object 비율할인영화
+object 할인조건
+object 순번조건
+object 기간조건
+
+hide empty members
+hide empty methods
+
+영화 <|-- 금액할인영화
+영화 <|-- 비율할인영화
+
+영화 "1" -- "*" 상영
+상영 "1" -- "*" 예매
+
+영화 "1" -- "1..*" 할인조건
+할인조건 <|-- 순번조건
+할인조건 <|-- 기간조건
+@enduml
