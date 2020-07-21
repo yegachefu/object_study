@@ -1,0 +1,18 @@
+@startuml
+skinparam object {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+object 영화
+object 할인정책
+object 금액할인정책
+object 비율할인정책
+
+hide empty members
+hide empty methods
+
+영화 -> 할인정책
+할인정책 <|-- 금액할인정책
+할인정책 <|-- 비율할인정책
+@enduml

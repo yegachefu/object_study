@@ -1,0 +1,19 @@
+@startuml
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+hide empty members
+hide empty methods
+
+package "서버" #F6FFCC {
+  abstract class 할인정책
+  할인정책 <|-- 금액할인정책
+  할인정책 <|-- 비율할인정책
+}
+
+package "클라이언트" #FFEBFF {
+  영화 -> 할인정책
+}
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+skinparam object {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+object Client
+object Factory
+object 영화
+object 할인정책
+object 금액할인정책
+object 비율할인정책
+
+hide empty members
+hide empty methods
+
+Client ..> "use" Factory
+Client "create" -> "use" 영화
+Factory ..> "create" 영화
+Factory ..> "create" 금액할인정책
+영화 --> "use" 할인정책
+할인정책 <|-- 금액할인정책
+할인정책 <|-- 비율할인정책
+@enduml
