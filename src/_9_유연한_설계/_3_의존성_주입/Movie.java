@@ -7,7 +7,7 @@ public class Movie {
     private Duration runningTime;
     private DiscountPolicy discountPolicy;
 
-    public Movie(String title, Duration runningTime, DiscountPolicy discountPolicy) {
+    public Movie(String title, Duration runningTime) {
         this.title = title;
         this.runningTime = runningTime;
         // Service Locator 패턴
